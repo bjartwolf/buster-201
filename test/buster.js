@@ -2,16 +2,20 @@ config = module.exports;
 
 config["My tests"] = {
     rootPath: "../",
-    environment: "node", // or "buster"
+    environment: "browser",
+    libs: [
+        "lib/knockout-2.1.0.js",
+        "lib/jquery-1.8.0.min.js"
+    ],
     sources: [
-        "lib/**/*.js"
+        "lib/ViewModel.js"
     ],
     tests: [
         "test/*-test.js"
     ],
     extensions: [require("buster-lint")],
     "buster-lint": {
-	linterOptions: {
+    linterOptions: {
             maxlen:150,
             jquery:true,
             vars:true,
@@ -22,6 +26,10 @@ config["My tests"] = {
                 "refute",
                 "assert",
             ]
-        }
-    }
+        },
+    excludes: [
+            "jquery",
+            "knockout",
+            "sinon"]
+}
 }
