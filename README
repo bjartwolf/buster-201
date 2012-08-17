@@ -1,3 +1,8 @@
+This tutorial is the tutorial from http://learn.knockoutjs.com/#/?tutorial=intro
+with setup and tests from busterjs.org
+
+They require buster, node, npm to be set up on your system
+
 Link to buster
 	sudo npm link buster
 Install buster lint
